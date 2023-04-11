@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import Image from './Images/id.svg'
-import Image2 from './Images/hierarchy.svg'
-import Image3 from './Images/date-28.svg'
+// import Image from './Images/id.svg'
+// import Image2 from './Images/hierarchy.svg'
+// import Image3 from './Images/date-28.svg'
 import Image4 from './Images/gender.svg'
-import Back_butt from './Images/back.png'
-import './StaffAdd.css'
+// import Back_butt from './Images/back.png'
+import './Staff_add.css'
 function Employeelogin() {
     const newDate = new Date()
     const [staffNumber, changeStaff] = useState('');
