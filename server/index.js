@@ -19,6 +19,9 @@ app.use('/adminLogin',require('./Routes/AdminLogin'));
 //Add Staff
 app.use('/addStaff',require('./Routes/AddEmploye'));
 
+//Add Branch
+app.use('/addBranch',require('./Routes/AddBranch'));
+
 app.listen(5000,()=>{
     console.log('Server is running on PORT 5000');
 })

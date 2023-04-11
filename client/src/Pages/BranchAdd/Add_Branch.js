@@ -9,9 +9,29 @@ function Add_Branch() {
     const [PostCode, changePostCode] = useState(newDate.toISOString().slice(0, 10));
     const [BranchContact, changeContact] = useState('');
     const [Mid, changeMid] = useState('');
+
+
+    const handleForm=async(e)=>{
+        e.preventDefault();
+        const response=await fetch('/addBranch',{
+            method:'POST',
+            body:JSON.stringify({
+                BranchNo,
+                Street,
+                City,
+                PostCode,
+                BranchContact,
+                Mid
+            }),
+            headers:{'Content-type':'application/json'},
+
+        })
+    }
+
+
     return (
         <div className='e-login' >
-            <form className='login-form'>
+            <form className='login-form' onSubmit={handleForm}>
                 <div className='main-container'>
                 <div className='reg-con' id='reg-con' >
                         <div className="register"> <div> Add Branch<br /></div></div>
@@ -27,9 +47,6 @@ function Add_Branch() {
                         </div >
                         <div className='content-1'>
                             <div className='sub-content-2'>
-                                {/* <span class="material-symbols-outlined">
-                                    person
-                                </span> */}
                                 <input className='inp' type='text' value={City} placeholder="City" onChange={(e) => changeCity(e.target.value)} ></input>
                             </div>
 
@@ -37,18 +54,12 @@ function Add_Branch() {
                       
                         <div className='content-1'>
                             <div className='sub-content-2'>
-                                {/* <span class="material-symbols-outlined">
-                                    person
-                                </span> */}
                                 <input className='inp' type='text' value={PostCode1} placeholder="Post Code" onChange={(e) => changePostCode1(e.target.value)} ></input>
                             </div>
 
                         </div>
                         <div className='content-1'>
                             <div className='sub-content-2'>
-                                {/* <span class="material-symbols-outlined">
-                                    person
-                                </span> */}
                                 <input className='inp' type='text' value={BranchContact} placeholder="Branch Contact" onChange={(e) => changeContact(e.target.value)} ></input>
                             </div>
 
