@@ -53,7 +53,9 @@ function Employeelogin() {
                         </div >
                         <div className='content-1'>
                             <div className='sub-content-2'>
-                                <img src={Image}></img>
+                                <span class="material-symbols-outlined">
+                                    person
+                                </span>
                                 <input className='inp' type='text' value={staffNumber} placeholder="Staff Id" onChange={(e) => changeStaff(e.target.value)} ></input>
                             </div>
 
@@ -123,7 +125,7 @@ function Employeelogin() {
                 </div>
                 <div className='Buttons'>
                     <button className='back-button' onClick={ChangePos1} style={{ opacity: `${Opacity1}` }}>BACK</button>
-                    <button className='submit-button' type='submit' style={{ opacity: `${Opacity1}` }}>submit</button>
+                    <button className='submit-button' type='submit' style={{ opacity: `${Opacity1}` }}>SUBMIT</button>
                     <button className='back-button' onClick={ChangePos} style={{ opacity: `${Opacity}` }}>NEXT</button>
                 </div>
             </form>
