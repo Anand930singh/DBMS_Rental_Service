@@ -9,6 +9,26 @@ function Add_Branch() {
     const [PostCode, changePostCode] = useState(newDate.toISOString().slice(0, 10));
     const [BranchContact, changeContact] = useState('');
     const [Mid, changeMid] = useState('');
+
+
+    const handleForm=async(e)=>{
+        e.preventDefault();
+        const response=await fetch('/addBranch',{
+            method:'POST',
+            body:JSON.stringify({
+                BranchNo,
+                Street,
+                City,
+                PostCode,
+                BranchContact,
+                Mid
+            }),
+            headers:{'Content-type':'application/json'},
+
+        })
+    }
+
+
     return (
         <div className='e-login_1' >
             <form className='login-form_1'>
