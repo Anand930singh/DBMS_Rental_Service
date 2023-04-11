@@ -77,7 +77,9 @@ function Employeelogin() {
                         </div >
                         <div className='content-1'>
                             <div className='sub-content-2'>
-                                <img src={Image}></img>
+                                <span class="material-symbols-outlined">
+                                    person
+                                </span>
                                 <input className='inp' type='text' value={staffNumber} placeholder="Staff Id" onChange={(e) => changeStaff(e.target.value)} ></input>
                             </div>
 
