@@ -152,7 +152,6 @@ function Employeelogin() {
                 </div>
                 <div className='Buttons'>
                     <button className='back-button' onClick={ChangePos1} style={{ opacity: `${Opacity1}` }}>BACK</button>
-                    
                     <button className='back-button' onClick={ChangePos} style={{ opacity: `${Opacity}` }}>NEXT</button>
                 </div>
             </form>
