@@ -16,7 +16,6 @@ function Add_Branch() {
         const response = await fetch('/addBranch', {
             method: 'POST',
             body: JSON.stringify({
-                BranchNo,
                 Street,
                 City,
                 PostCode1,
@@ -28,7 +27,7 @@ function Add_Branch() {
         const json2=await response.json();
         if(json2.status==='SUCCESS')
         {
-            await window.alert('Branch added Scuccessfully');
+             window.alert('Branch added Scuccessfully');
             window.location.replace('http://localhost:3000/adminoptions')
         }
     }
@@ -41,9 +40,7 @@ function Add_Branch() {
                     <div className='reg-con_1' id='reg-con_1' >
                         <div className="register_1"> <div> Add Branch<br /></div></div>
                         <div className='content-1_1'>
-                            <div className='sub-content-1_1'>
-                            <input className='inp_1' type='text' value={BranchNo} placeholder="Branch Number" onChange={(e) => changeBranch(e.target.value)} ></input>
-                            </div>
+                           
                             <div className='sub-content-1_1'>
 
                                 <input className='inp_1' type='text' value={Street} placeholder="Street Name" onChange={(e) => changeStreet(e.target.value)} ></input>
