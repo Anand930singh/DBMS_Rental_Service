@@ -13,13 +13,24 @@ const AddEmployee = async (req, res) => {
 
     const { staffNumber, Name, LastName, SEX, dob, Position, BranchId, Supervisior, salary, start_Date } = req.body;
     const sql = 'INSERT INTO staffs (Eid,Lname,Fname,Branch_id,Sex,DOB,Position,Salary,Ssid,Start_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+    const add_auth='Insert Into Authentication (Typ,Aid,Pass) values (?,?,?)';
+
     const values = [staffNumber, LastName, Name, BranchId, SEX, dob, Position, salary, Supervisior, start_Date];
     con.connect(function(err) {
         if (err) throw err;
         con.query(sql,values, function(err, result) {
             if (err) throw err;
-            console.log(result);
-            res.send(result);
+
+            con.query(add_auth,['S',staffNumber,dob],function(err)
+            {
+                if(err) throw err;
+            })
+
+            console.log('Employee added Successfully');
+            res.json({
+                status: "SUCCESS",
+                message: "Signin successful",
+            });
         });
     });
 };

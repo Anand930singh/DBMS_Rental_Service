@@ -4,8 +4,9 @@ import './admin_login.css'
 function Adminlogin() {
     const [id, setId]=useState('');
     const [pass,setPass]= useState('');
-    const [userTyp,setUsertyp]=useState('');
+    const [userTyp,setUsertyp]=useState('A');
     const [message,setMessage]=useState('');
+
     
 
     const handleForm=async (e)=>{
@@ -13,7 +14,7 @@ function Adminlogin() {
         const response=await fetch('/adminLogin',{
             method:'POST',
             body:JSON.stringify({
-                // userTyp,
+                userTyp,
                 id,
                 pass,
             }),
@@ -51,6 +52,7 @@ function Adminlogin() {
                 <br/>
                 <input type="password" placeholder='*********' onChange={(e)=>setPass(e.target.value)}></input>
                 </div>
+                {message && <p style={{color: 'red', textAlign: 'center'}}>{message}</p>}
                 <div>
                     <button type='submit' >Login</button>
                 </div>

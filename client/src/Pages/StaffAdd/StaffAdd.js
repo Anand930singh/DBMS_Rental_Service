@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 // import Image from './Images/id.svg'
 // import Image2 from './Images/hierarchy.svg'
 // import Image3 from './Images/date-28.svg'
@@ -21,6 +21,9 @@ function Employeelogin() {
     const [Opacity, changeOpec] = useState(1);
     const [Opacity1, changeOpec1] = useState(0);
     const [Div1Pos1, changePosDiv1] = useState(100);
+    const [message,setMessage]=useState();
+    
+    const [data, setData] = useState([]);
 
 
     const handleForm=async(e)=>{
@@ -41,9 +44,29 @@ function Employeelogin() {
         }),
             headers:{'Content-type':'application/json'},
         });
+        
+        const json2=await response.json();
+        if(json2.status==='SUCCESS')
+        {
+            await window.alert('Employee added Scuccessfully');
+            window.location.replace('http://localhost:3000/adminoptions')
+        }
 
     }
 
+    useEffect(() => {
+        async function fetchBranches() {
+            const data = await fetch('/getBranches', { method: 'POST' });
+            const json = await data.json();
+            if(json.status==='400')
+            {
+                setMessage('Error!')
+            }
+
+            setData(json);
+        }
+        fetchBranches();
+    }, []);
 
     const ChangePos = (e) => {
         e.preventDefault();
@@ -127,7 +150,19 @@ function Employeelogin() {
                             </div>
                             <div className='content-1'>
                                 <div className='sub-content-2'>
-                                    <input className='inp' type='text' value={BranchId} placeholder="Branch Id" onChange={(e) => changeBranch(e.target.value)} ></input>
+                                    {/* <input className='inp' type='text' value={BranchId} placeholder="Branch Id" onChange={(e) => changeBranch(e.target.value)} ></input> */}
+                                    <select
+                                    className='inp'
+                                    placeholder="Branch Id"
+                                    value={BranchId}
+                                    onChange={(e) => changeBranch(e.target.value)}
+                                >
+                                    {data.map((item, index) => (
+                                        <option key={index} value={item.Branch_no}>
+                                            {item.Branch_no+' '+item.Street+' '+item.City+' ('+item.Postcode+')'}
+                                        </option>
+                                    ))}
+                                </select>
                                 </div>
                             </div>
                             <div className='content-1'>
@@ -145,6 +180,9 @@ function Employeelogin() {
                                     <input className='inp' type='text' value={salary} placeholder="Salary" onChange={(e) => changeSalary(e.target.value)} ></input>
                                 </div>
                             </div>
+                            {message &&(
+                    <p style="color: red; font-size: 12px;">{message}</p>
+                  )}
                             <button className='submit-button' type='submit' style={{ opacity: `${Opacity1}` }}>submit</button>
                         </div>
                     </div>
