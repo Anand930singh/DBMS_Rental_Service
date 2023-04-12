@@ -31,7 +31,6 @@ function Employeelogin() {
         const response=await fetch('/addStaff',{
             method:'POST',
             body:JSON.stringify({
-                staffNumber,
                 Name,
                 LastName,
                 SEX,
@@ -98,15 +97,7 @@ function Employeelogin() {
                             </div>
 
                         </div >
-                        <div className='content-1'>
-                            <div className='sub-content-2'>
-                                <span class="material-symbols-outlined">
-                                    person
-                                </span>
-                                <input className='inp' type='text' value={staffNumber} placeholder="Staff Id" onChange={(e) => changeStaff(e.target.value)} ></input>
-                            </div>
-
-                        </div>
+                     
                         <div className='content-1'>
                             <div className='sub-content-2'>
                                 <img src={Image4}></img>

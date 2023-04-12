@@ -10,8 +10,8 @@ const con = mysql.createConnection({
 
 const AddEmployee = async (req, res) => {
     console.log(req.body);
-
-    const { staffNumber, Name, LastName, SEX, dob, Position, BranchId, Supervisior, salary, start_Date } = req.body;
+    const staffNumber = Math.floor(Math.random() * (10 ** 9)) + (10 ** 9); // Generate a random 10-digit number
+    const { Name, LastName, SEX, dob, Position, BranchId, Supervisior, salary, start_Date } = req.body;
     const sql = 'INSERT INTO staffs (Eid,Lname,Fname,Branch_id,Sex,DOB,Position,Salary,Ssid,Start_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
     const add_auth='Insert Into Authentication (Typ,Aid,Pass) values (?,?,?)';
 
