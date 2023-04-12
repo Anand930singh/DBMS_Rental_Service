@@ -61,7 +61,7 @@ function Employeelogin() {
     }
     return (
         <div className='e-login' >
-            <form className='login-form' onSubmit={handleForm}>
+            <form className='login-form' onSubmit={handleForm} id="form1">
                 <div className='main-container'>
                     <div className='reg-con' id='reg-con' style={{ left: `${Div1Pos}%` }}>
                         <div className="register"> <div> Staff Registration <br /></div></div>
@@ -119,7 +119,7 @@ function Employeelogin() {
                         </div>
 
                     </div>
-                    <div className='reg-con-1' id='reg-con-1' style={{ left: `${Div1Pos1}%`, opaacity: `${Opacity1}` }}>
+                    <div className='reg-con-1' id='reg-con-1' style={{ left: `${Div1Pos1}%` }} >
                         <div class='reg-con1'>
                             <div className='other-detail'>
                                 <div> Other Details
@@ -145,13 +145,13 @@ function Employeelogin() {
                                     <input className='inp' type='text' value={salary} placeholder="Salary" onChange={(e) => changeSalary(e.target.value)} ></input>
                                 </div>
                             </div>
-                            <button className='submit-button' type='submit' style={{ opacity: `${Opacity1}` }}>submit</button>
                         </div>
                     </div>
                     <div class='reg-con2'></div>
                 </div>
                 <div className='Buttons'>
                     <button className='back-button' onClick={ChangePos1} style={{ opacity: `${Opacity1}` }}>BACK</button>
+                    <button className='submit-button' type='submit'  form="form1" style={{ opacity: `${Opacity1}` }}>submit</button>
                     <button className='back-button' onClick={ChangePos} style={{ opacity: `${Opacity}` }}>NEXT</button>
                 </div>
             </form>
