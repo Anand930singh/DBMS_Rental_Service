@@ -5,7 +5,9 @@ function Add_Owner() {
     const [FirstNameOwner, changeNameOwner] = useState('');
     const [OwnerId, changeOwnerId] = useState('');
     const [TelPhoneNumber, changeTelNumber] = useState('');
-    const [OwnerAddress, changeOwnerAddress] = useState('');
+    const [OwnerCity, changeOwnerCity] = useState('');
+    const [OwnerStreet, changeOwnerStreet] = useState('');
+    const [OwnerPincode, changeOwnerPincode] = useState('');
     const [OwnerBranchNo, changeOwnerBranchNo] = useState('');
     const [OwnerContact, changeOwnerContact] = useState('');
     const [OwnerBusiness, changeOwnerBusiness] = useState('');
@@ -61,10 +63,20 @@ function Add_Owner() {
 
                     </div >
                     <div className='Owner-content-div'>
+                    <div className='Owner-content-1'>
+                            <input className='Owner-Input' type='text' value={OwnerStreet} placeholder="Street" onChange={(e) => changeOwnerStreet(e.target.value)} ></input>
+                        </div>
+                        <div className='Owner-content-1'>
+
+                            <input className='Owner-Input' type='text' value={OwnerCity} placeholder="City" onChange={(e) => changeOwnerCity(e.target.value)} ></input>
+                        </div>
+                    </div>
+                    <div className='Owner-content-div'>
                         <div className='Owner-content-2'>
 
-                            <input className='Owner-Input' type='text' value={OwnerId} placeholder="OwnerId" onChange={(e) => changeOwnerId(e.target.value)} ></input>
+                            <input className='Owner-Input' type='text' value={OwnerPincode} placeholder="Pincode" onChange={(e) => changeOwnerPincode(e.target.value)} ></input>
                         </div>
+
                     </div>
                     <div className='Owner-content-div'>
                         <div className='Owner-content-2'>
@@ -72,13 +84,7 @@ function Add_Owner() {
                             <input className='Owner-Input' type='text' value={TelPhoneNumber} placeholder="TelephoneNumber" onChange={(e) => changeTelNumber(e.target.value)} ></input>
                         </div>
                     </div>
-                    <div className='Owner-content-div'>
-                        <div className='Owner-content-2'>
-
-                            <input className='Owner-Input' type='text' value={OwnerAddress} placeholder="OwnerAddress" onChange={(e) => changeOwnerAddress(e.target.value)} ></input>
-                        </div>
-
-                    </div></div>
+                    </div>
                     <div className='Owner-SecondPage' style={{left:`${Div1Pos1Owner}%`}}>
                     <div className='Owner-content-div'>
                         <div className='Owner-content-2'>

@@ -21,9 +21,14 @@ function Add_Client() {
             <div className='Client-Registeration-div'>
                 <div className='register_details_Client'>
                     <div className='register-content-Client'> Client registeration</div>
-                    <div className='Div-line_Client'>
-                        <div className='Div-line-width_Client'></div>
+                    <div className='Div-line-Client'>
+                        <div className='Div-line-width-Client'></div>
                     </div>
+                    <div className='Details-type-Client'>
+                    <div className='Details-type-value-Client' style={{backgroundColor:`${ClientPersonalColor}`,color:`${ClientBusinessColor}`,borderColor:`${ClientBusinessColor}`}}>Personal</div>
+                    <div className='Details-type-value-Client' style={{backgroundColor:`${ClientBusinessColor}`,color:`${ClientPersonalColor}`,borderColor:`${ClientPersonalColor}`}}>Business</div>
+                    
+                </div>
                 </div>
                 <form className='Client-registeration-form'>
                     <div className='Client_FirstPage' style={{ left: `${Div1PosClient}%` }}>
