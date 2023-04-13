@@ -6,6 +6,9 @@ import AdminOptions from './Pages/Admin_options/admin_options'
 import StaffAdd from './Pages/StaffAdd/StaffAdd'
 import AddBranch from './Pages/BranchAdd/Add_Branch'
 import Home from './Pages/Home/Home'
+import Add_Client from './Pages/Add_Client/Add_Client'
+import Add_owner from './Pages/Add_Owner/Add_Owner'
+import Staff_login from './Pages/Staff_Login/Staf_Login'
 
 function App() {
   return (
@@ -17,6 +20,10 @@ function App() {
       <Route path="/adminoptions" element={<AdminOptions />}></Route>
       <Route path="/staffadd" element={<StaffAdd />}></Route>
       <Route path="/branchadd" element={<AddBranch />}></Route>
+      <Route path="/clientadd" element={<Add_Client />}></Route>
+      <Route path="/owneradd" element={<Add_owner />}></Route>
+      <Route path="/stafflogin" element={<Staff_login />}></Route>
+
       </Routes>
     </Router>
   );
