@@ -14,6 +14,7 @@ import Staff_login from './Pages/Staff_Login/Staf_Login'
 import Owner_login_options from './Pages/Owner_login_options/Owner_login_options'
 import Client_login_options from './Pages/Client_login_options/Client_login_options'
 
+import Add_Property from './Pages/Add_Property/Add_Property'
 function App() {
   return (
     <Router>
@@ -26,12 +27,12 @@ function App() {
       <Route path="/adminoptions" element={<AdminOptions />}></Route>
       <Route path="/staffadd" element={<StaffAdd />}></Route>
       <Route path="/branchadd" element={<AddBranch />}></Route>
-      <Route path="/clientadd" element={<Add_Client />}></Route>
+      <Route path="/clientreg" element={<Add_Client />}></Route>
       <Route path="/ownerreg" element={<Add_owner />}></Route>
       <Route path="/stafflogin" element={<Staff_login />}></Route>
       <Route path="/ownerloginoption" element={<Owner_login_options />}></Route>
       <Route path="/clientloginoption" element={<Client_login_options />}></Route>
-
+      <Route path="/propertyadd" element={<Add_Property />}></Route>
       </Routes>
     </Router>
   );

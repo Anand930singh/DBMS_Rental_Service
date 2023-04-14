@@ -9,7 +9,7 @@ function Add_Owner() {
     const [OwnerStreet, changeOwnerStreet] = useState('');
     const [OwnerPincode, changeOwnerPincode] = useState('');
     const [OwnerBranchNo, changeOwnerBranchNo] = useState('');
-    const [OwnerContact, changeOwnerContact] = useState('');
+    const [OwnerContactName, changeOwnerContact] = useState('');
     const [OwnerBusiness, changeOwnerBusiness] = useState('');
     const [OwnerEmail, changeOwnerEmail] = useState('');
     const [OwnerPersonalColor, changeOwnerPersonalColor] = useState('#a0b3b0');
@@ -20,6 +20,7 @@ function Add_Owner() {
     const [Div1Pos1Owner, changePosDiv1Owner] = useState(100);
     const [message, setMessage] = useState('');
     const [data, setData] = useState([]);
+    const [ownerDob, changeOwnerdob] = useState('');
 
     const ChangePosOwner = (e) => {
         e.preventDefault();
@@ -54,7 +55,9 @@ function Add_Owner() {
                 TelPhoneNumber,
                 OwnerBranchNo,
                 OwnerBusiness,
-                OwnerEmail
+                OwnerContactName,
+                OwnerEmail,
+                ownerDob
             }),
             headers: { "Content-type": "application/json" },
         });
@@ -140,9 +143,13 @@ function Add_Owner() {
                             </div>
                         </div>
                         <div className='Owner-content-div'>
-                            <div className='Owner-content-2'>
+                            <div className='Owner-content-1'>
 
-                                <input className='Owner-Input' type='number' value={OwnerContact} placeholder="Contact Number" onChange={(e) => changeOwnerContact(e.target.value)} ></input>
+                                <input className='Owner-Input' type='text' value={OwnerContactName} placeholder="Contact Name" onChange={(e) => changeOwnerContact(e.target.value)} ></input>
+                            </div>
+                            <div className='Owner-content-1'>
+
+                                <input className='Owner-Input' type='date' value={ownerDob} placeholder="DOB" onChange={(e) => changeOwnerdob(e.target.value)} ></input>
                             </div>
                         </div>
                         <div className='Owner-content-div'>
