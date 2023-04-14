@@ -8,9 +8,9 @@ function Common_login() {
     <div className='body'>
         <div className='block'>
             <a href='/adminlogin'><div>Admin</div></a>
-            <a href='/#'><div>Staff</div></a>
-            <a href='/#'><div>Owner</div></a>
-            <a href='/#'><div>Client</div></a>
+            <a href='/stafflogin'><div>Staff</div></a>
+            <a href='/ownerloginoption'><div>Owner</div></a>
+            <a href='/clientloginoption'><div>Client</div></a>
         </div>
     </div>
   )

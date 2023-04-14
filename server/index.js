@@ -25,6 +25,9 @@ app.use('/addBranch',require('./Routes/AddBranch'));
 //Get Branches
 app.use('/getBranches',require('./Routes/GetBranch'));
 
+//Owner Reg
+app.use('/ownerReg',require('./Routes/OwnerReg'));
+
 app.listen(5000,()=>{
     console.log('Server is running on PORT 5000');
 })

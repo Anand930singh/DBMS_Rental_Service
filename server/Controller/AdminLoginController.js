@@ -8,7 +8,7 @@ const con = mysql.createConnection({
 });
 
 const AdminLogin = async (req, res) => {
-  // console.log(req.body);
+  console.log(req.body);
   const { userTyp,id, pass } = req.body;
 
   const sql = `SELECT * FROM authentication WHERE Aid = ? and Typ=?`;
