@@ -11,6 +11,7 @@ function Add_Client() {
     const [LastNameClient, changelnameClient] = useState('');
     const [FirstNameClient, changeNameClient] = useState('');
     const [ClientEmail, changeClientEmail] = useState('');
+    const [ClientContact, changeClientContact] = useState('');
     const [TypeClient, changeTypeClient] = useState('');
     const [MaxRentClient, changeMaxRentClient] = useState('');
     const [ClientTelPhoneNumber, changeClientTelNumber] = useState('');
@@ -24,11 +25,6 @@ function Add_Client() {
                     <div className='Div-line-Client'>
                         <div className='Div-line-width-Client'></div>
                     </div>
-                    <div className='Details-type-Client'>
-                    <div className='Details-type-value-Client' style={{backgroundColor:`${ClientPersonalColor}`,color:`${ClientBusinessColor}`,borderColor:`${ClientBusinessColor}`}}>Personal</div>
-                    <div className='Details-type-value-Client' style={{backgroundColor:`${ClientBusinessColor}`,color:`${ClientPersonalColor}`,borderColor:`${ClientPersonalColor}`}}>Business</div>
-                    
-                </div>
                 </div>
                 <form className='Client-registeration-form'>
                     <div className='Client_FirstPage' style={{ left: `${Div1PosClient}%` }}>
@@ -43,19 +39,14 @@ function Add_Client() {
 
                         </div >
                         <div className='Client-content-div'>
-                            <div className='Client-content-2'>
-
-                                <input className='Client-Input' type='text' value={ClientEmail} placeholder="Email" onChange={(e) => changeClientEmail(e.target.value)} ></input>
+                            <div className='Client-content-1'>
+                                <input className='Client-Input' type='text' value={ClientEmail} placeholder="Contact No." onChange={(e) => changeClientEmail(e.target.value)} ></input>
                             </div>
-                        </div>
-                        <div className='Client-content-div'>
-                            <div className='Client-content-2'>
+                            <div className='Client-content-1'>
 
-                                <input className='Client-Input' type='text' value={ClientTelPhoneNumber} placeholder="TelephoneNumber" onChange={(e) => changeClientTelNumber(e.target.value)} ></input>
+                                <input className='Client-Input' type='text' value={ClientContact} placeholder="Email" onChange={(e) => changeClientContact(e.target.value)} ></input>
                             </div>
-
-
-                        </div>
+                        </div >
                         <div className='Client-content-div'>
                             <div className='Client-content-2'>
                                 <input className='Client-Input' type='text' value={TypeClient} placeholder="Type Of Poperty" onChange={(e) => changeTypeClient(e.target.value)} ></input>

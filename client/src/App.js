@@ -9,7 +9,7 @@ import Home from './Pages/Home/Home'
 import Add_Client from './Pages/Add_Client/Add_Client'
 import Add_owner from './Pages/Add_Owner/Add_Owner'
 import Staff_login from './Pages/Staff_Login/Staf_Login'
-
+import Add_Property from './Pages/Add_Property/Add_Property'
 function App() {
   return (
     <Router>
@@ -23,7 +23,7 @@ function App() {
       <Route path="/clientadd" element={<Add_Client />}></Route>
       <Route path="/owneradd" element={<Add_owner />}></Route>
       <Route path="/stafflogin" element={<Staff_login />}></Route>
-
+      <Route path="/propertyadd" element={<Add_Property />}></Route>
       </Routes>
     </Router>
   );
