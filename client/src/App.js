@@ -5,6 +5,7 @@ import AdminLogin from './Pages/Admin_login/admin_login'
 import OwnerLogin from './Pages/Owner_login/owner_login'
 import ClientLogin from './Pages/Client_login/Client_login'
 import AdminOptions from './Pages/Admin_options/admin_options'
+import OwnerOptions from './Pages/Owner_options/owner_options'
 import StaffAdd from './Pages/StaffAdd/StaffAdd'
 import AddBranch from './Pages/BranchAdd/Add_Branch'
 import Home from './Pages/Home/Home'
@@ -25,6 +26,7 @@ function App() {
       <Route path="/ownerlogin" element={<OwnerLogin />}></Route>
       <Route path="/clientlogin" element={<ClientLogin />}></Route>
       <Route path="/adminoptions" element={<AdminOptions />}></Route>
+      <Route path="/owneroptions" element={<OwnerOptions />}></Route>
       <Route path="/staffadd" element={<StaffAdd />}></Route>
       <Route path="/branchadd" element={<AddBranch />}></Route>
       <Route path="/clientreg" element={<Add_Client />}></Route>

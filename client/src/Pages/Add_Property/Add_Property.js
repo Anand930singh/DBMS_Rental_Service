@@ -7,17 +7,48 @@ function Add_Property() {
     const [PropertyType, changePropertyType] = useState('');
     const [PropertyRoom, changePropertyRoom] = useState('');
     const [PropertyRent, changePropertyRent] = useState('');
+    const [message,setMessage]=useState('');
+
+    const handleForm=async (e)=>{
+        console.log(PropertyCity);
+        e.preventDefault();
+        const response=await fetch('/addProperty',{
+            method:'POST',
+            body:JSON.stringify({
+                PropertyCity,
+                PropertyStreet,
+                PropertyPincode,
+                PropertyType,
+                PropertyRoom,
+                PropertyRent
+            }),
+            headers: { "Content-type": "application/json" },
+        });
+
+        const json= await response.json();
+        if(json.err==='FAILED')
+        {
+            setMessage(json.msg);
+        }
+        else{
+            window.location.replace('http://localhost:3000/owneroptions')
+        }
+        console.log(json);
+
+    }
+
+
   return (
     <div className='Property_Registeration'>
         {/* <div className='blur-background'></div> */}
-            <div className='Property-Registeration-div'>
+            <form  id="form1" className='Property-Registeration-div' onSubmit={handleForm}>
             <div className='register_details-Property'>
                 <div className='register-content-Property'> Property registeration</div>
                 <div className='Div-line-Property'>
                     <div className='Div-line-width-Property'></div>
                 </div>
             </div>
-                <form className='Property-registeration-form'>
+                <div className='Property-registeration-form'>
                     <div className='Property_FirstPage' >
                     <div className='Property-content-div'>
                     <div className='Property-content-1'>
@@ -51,11 +82,11 @@ function Add_Property() {
                         </div>
                         </div>
                     </div>
-                </form>
-                <div className='Property-Buttons'>
-                    <button className='Property-submit-button' type='submit'  form="form1" >submit</button>
                 </div>
-            </div>
+                <div className='Property-Buttons'>
+                    <button className='Property-submit-button' type="submit"  form="form1" >Submit</button>
+                </div>
+            </form>
             </div>
     )
 }

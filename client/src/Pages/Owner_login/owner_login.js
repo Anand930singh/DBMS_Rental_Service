@@ -4,14 +4,14 @@ import './owner_login.css'
 function Ownerlogin() {
     const [id, setId]=useState('');
     const [pass,setPass]= useState('');
-    const [userTyp,setUsertyp]=useState('A');
+    const [userTyp,setUsertyp]=useState('O');
     const [message,setMessage]=useState('');
 
     
 
     const handleForm=async (e)=>{
         e.preventDefault();
-        const response=await fetch('/ownerLogin',{
+        const response=await fetch('/adminLogin',{
             method:'POST',
             body:JSON.stringify({
                 userTyp,
@@ -33,9 +33,7 @@ function Ownerlogin() {
 
     }
 
-    // if (window.location.pathname === 'http://localhost:3000/ownerlogin') {
-    //     setUsertyp('A');
-    //   }
+
 
   return (
     <div className='owner_login'>
