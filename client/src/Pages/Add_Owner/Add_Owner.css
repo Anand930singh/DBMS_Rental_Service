@@ -1,0 +1,231 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.Owner_Registeration {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Owner-Registeration-div {
+    height: 70vh;
+    width: 40vw;
+    background-color: #13232f;
+    position: relative;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: rgb(188, 188, 192);
+    border-width: 2px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    padding: 0% 2%;
+    /* margin-bottom: 2rem; */
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.register_details {
+    height: 30%;
+    width: 100%;
+    margin-bottom: 2rem;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-content-owner {
+    position: relative;
+    /* height: 34%; */
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 3vw;
+}
+
+.Div-line {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.Div-line-width {
+    border-width: 0.01px;
+    height: 1e-10px;
+    width: 100%;
+    border-style: dashed;
+    border-color: #a0b3b0;
+}
+
+.Details-type-owner {
+    /* height: 35%; */
+    width: 100%;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    /* padding: 10% 0%; */
+    box-sizing: border-box;
+}
+
+.Details-type-value {
+    position: relative;
+    height: 80%;
+    text-align: center;
+    /* color: white; */
+    display: flex;
+    margin-top: 1rem;
+    padding: 0rem 0.5rem;
+    align-items: center;
+    text-align: center;
+    top: -20%;
+    font-size: 1.7vw;
+    border-style: solid;
+    /* border-color: #a0b3b0; */
+    border-width: 1px;
+    border-radius: 5rem;
+}
+.Details-type-value:hover
+{
+    color: #13232f;
+    background-color: rgb(188, 188, 192);
+    border-color: #13232f;
+}
+.Owner-registeration-form {
+    height: 45%;
+    width: 100%;
+    overflow: hidden;
+}
+.Owner_FirstPage
+{
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    position: relative;
+    /* display: none; */
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    transition: ease-in 0.5s;
+    justify-content: space-between;
+    /* padding: 10% 0%; */
+    box-sizing: border-box;
+}
+.Owner-content-div {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 10% 0%; */
+    box-sizing: border-box;
+}
+
+.Owner-content-1 {
+    height: 80%;
+    width: 49%;
+    border-style: solid;
+    border-color: #a0b3b0;
+    overflow: hidden;
+    padding: 0rem 1rem;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-radius: 5px;
+
+}
+
+.Owner-content-2 {
+    height: 80%;
+    width: 100%;
+    padding: 0rem 1rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-style: solid;
+    border-color: #a0b3b0;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+.Owner-Input {
+    height: 80%;
+    width: 100%;
+    background-color: #13232f;
+    outline: none;
+    border: none;
+}
+.Owner-SecondPage
+{
+  height: 100%;
+  width: 100%;
+  top: -100%;
+  transition: ease-in 0.5s;
+  position: relative;
+}
+.Owner-Buttons {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Owner-back-button {
+    height: 50%;
+    width: 13%;
+    background-color: #13232f;
+    border-style: solid;
+    border-color: #a0b3b0;
+    border-width: 1px;
+    border-radius: 5rem;
+    color: #a0b3b0;
+    transition: opacity 0.5s ease-in;
+    font-size: 1rem;
+}
+.Owner-submit-button
+{
+    height: 20%;
+    width: 20%;
+    background-color: #13232f;
+    border-style: solid;
+    border-color: #a0b3b0;
+    border-width: 1px;
+    border-radius: 5rem;
+    color: #a0b3b0;
+    transition: opacity 0.5s ease-in;
+    font-size: 1.5rem;
+}
+::placeholder
+{
+    color: rgb(188, 188, 192);
+}
+.Owner-submit-button:hover
+{
+    color: #13232f;
+    background-color:#a0b3b0;
+    border-color: #13232f;
+}
+.Owner-back-button:hover
+{
+    color: #13232f;
+    background-color: #a0b3b0;
+    border-color: #13232f;
+}
