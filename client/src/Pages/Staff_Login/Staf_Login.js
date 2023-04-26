@@ -3,10 +3,31 @@ import './Staff_login.css'
 function Staf_Login() {
     const [staffId, ChangeStaffId] = useState('');
     const [Password, ChangePassword] = useState('');
+    const [message, setMeassage] = useState('');
+
+
+    const handleForm=async()=>{
+        const response=await fetch('/staffLogin',{
+            method:'POST',
+            body:JSON.stringify({
+                staffId,
+                Password
+            }),
+            headers: { 'Content-type': 'application/json' },
+        });
+        const json=response.json();
+        if(json.msg==='FAILED')
+        {
+            setMeassage('Try Again!');
+        }
+        else{
+            window.location.replace('http://localhost:3000/')
+        }
+    }
 
     return (
         <div className='e-login_2' >
-            <form className='login-form_2'>
+            <form className='login-form_2' name="stafflogin">
                 <div className='main-container_2'>
                     <div className='reg-con_2' id='reg-con_2' >
                         <div className="register_2"> <div> Staff Login<br /></div></div>
@@ -37,7 +58,7 @@ function Staf_Login() {
                     </div>
                 </div>
                 <div className='Buttons1_2'>
-                    <button className='submit-button_2' type='submit' >SUBMIT</button>
+                    <button className='submit-button_2' type='submit' form="stafflogin" >SUBMIT</button>
                 </div>
             </form>
         </div>

@@ -1,4 +1,8 @@
 // const con = require('../config/Connect');
+const express = require('express');
+const cookieParser = require('cookie-parser');
+const app = express();
+app.use(cookieParser());
 var mysql = require('mysql');
 const con = mysql.createConnection({
   host: "localhost",
@@ -8,7 +12,7 @@ const con = mysql.createConnection({
 });
 
 const AdminLogin = async (req, res) => {
-  // console.log(req.body);
+  console.log(req.body);
   const { userTyp,id, pass } = req.body;
 
   const sql = `SELECT * FROM authentication WHERE Aid = ? and Typ=?`;
@@ -20,6 +24,7 @@ const AdminLogin = async (req, res) => {
       // compare the password and send the appropriate response
       if (user.Pass === pass) {
         console.log("Signed In");
+        res.cookie('userId',id);
         res.status(500).json({
             err: "PASSED",
             msg: "User exist",

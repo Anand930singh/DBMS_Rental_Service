@@ -1,0 +1,32 @@
+.body{
+    background-color: black;
+    height:100vh;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block{
+    height:70vh;
+    width:50vw;
+    border:3px solid white;
+    border-radius: 12px;
+    color:white;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.block div{
+    border:1px solid white;
+    border-radius: 12px;
+    width:200px;
+    text-align: center;
+    padding:1rem;
+    margin:1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.block div:hover{
+    background-color: rgb(72, 71, 71);
+}
