@@ -1,7 +1,19 @@
 .App {
   text-align: center;
 }
-
+body{
+  width:100%;
+}
+.Main-container
+{
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -9,7 +9,7 @@ function Add_Property() {
     const [PropertyRent, changePropertyRent] = useState('');
   return (
     <div className='Property_Registeration'>
-        {/* <div className='blur-background'></div> */}
+        <div className='blur-background'></div>
             <div className='Property-Registeration-div'>
             <div className='register_details-Property'>
                 <div className='register-content-Property'> Property registeration</div>

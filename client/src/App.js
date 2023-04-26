@@ -10,22 +10,27 @@ import Add_Client from './Pages/Add_Client/Add_Client'
 import Add_owner from './Pages/Add_Owner/Add_Owner'
 import Staff_login from './Pages/Staff_Login/Staf_Login'
 import Add_Property from './Pages/Add_Property/Add_Property'
+import Travel from './Pages/Coin_Slip/Coin_Flip'
+import Query from './Pages/query_page/Query_page'
 function App() {
   return (
-    <Router>
-      <Routes>
-      <Route path="/" element={<Home />}></Route>
-      <Route path="/commonlogin" element={<Commonlogin />}></Route>
-      <Route path="/adminlogin" element={<AdminLogin />}></Route>
-      <Route path="/adminoptions" element={<AdminOptions />}></Route>
-      <Route path="/staffadd" element={<StaffAdd />}></Route>
-      <Route path="/branchadd" element={<AddBranch />}></Route>
-      <Route path="/clientadd" element={<Add_Client />}></Route>
-      <Route path="/owneradd" element={<Add_owner />}></Route>
-      <Route path="/stafflogin" element={<Staff_login />}></Route>
-      <Route path="/propertyadd" element={<Add_Property />}></Route>
-      </Routes>
-    </Router>
+    <div>
+      <Query/>
+    </div>
+    // <Router>
+    //   <Routes>
+    //   <Route path="/" element={<Home />}></Route>
+    //   <Route path="/commonlogin" element={<Commonlogin />}></Route>
+    //   <Route path="/adminlogin" element={<AdminLogin />}></Route>
+    //   <Route path="/adminoptions" element={<AdminOptions />}></Route>
+    //   <Route path="/staffadd" element={<StaffAdd />}></Route>
+    //   <Route path="/branchadd" element={<AddBranch />}></Route>
+    //   <Route path="/clientadd" element={<Add_Client />}></Route>
+    //   <Route path="/owneradd" element={<Add_owner />}></Route>
+    //   <Route path="/stafflogin" element={<Staff_login />}></Route>
+    //   <Route path="/propertyadd" element={<Add_Property />}></Route>
+    //   </Routes>
+    // </Router>
   );
 }
 

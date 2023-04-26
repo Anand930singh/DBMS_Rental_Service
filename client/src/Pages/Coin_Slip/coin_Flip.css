@@ -1,0 +1,17 @@
+
+.coin
+{
+    height: 15vw;
+    width: 15vw;
+    background-color: antiquewhite;
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    transition: 1s;
+    /* transform:rotateY(0deg); */
+}
+.display
+{
+    position: relative;
+    top: 15vw;
+}
