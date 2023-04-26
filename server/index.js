@@ -18,6 +18,9 @@ app.use('/branchForm',require('./Routes/BranchForm'));
 //Admin Login
 app.use('/adminLogin',require('./Routes/AdminLogin'));
 
+//Admin Login
+app.use('/clientLogin',require('./Routes/ClientLogin'));
+
 //Add Staff
 app.use('/addStaff',require('./Routes/AddEmploye'));
 

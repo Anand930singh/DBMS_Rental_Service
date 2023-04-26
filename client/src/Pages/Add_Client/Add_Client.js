@@ -14,10 +14,12 @@ function Add_Client() {
     const [TypeClient, changeTypeClient] = useState('');
     const [ClientEmail, changeClientEmail] = useState('');
     const [ClientContact, changeClientContact] = useState('');
-    const [currentDate, setCurrentDate] = useState(new Date());
+    const [currentDate, setCurrentDate] = useState(new Date().toLocaleDateString());
     const [branchId,setBranchId]=useState('');
+    const [EmpId,setEmpId]=useState('');
     const [data, setData] = useState([]);
     const [DOB, setDOB] = useState('');
+
 
     // const [ClientTelPhoneNumber, changeClientTelNumber] = useState('');
     // const [ClientPersonalColor, changeClientPersonalColor] = useState('#a0b3b0');
@@ -25,6 +27,7 @@ function Add_Client() {
 
     const handleForm = async (e) => {
         e.preventDefault();
+        console.log(DOB);
         const response = await fetch('/clientReg', {
             method: 'POST',
             body: JSON.stringify({
@@ -35,11 +38,18 @@ function Add_Client() {
                 TypeClient,
                 ClientEmail,
                 branchId,
+                EmpId,
                 ClientContact,
                 DOB
             }),
             headers: { "Content-type": "application/json" },
         });
+        const json=await response.json();
+        if(json.status="SUCCESS")
+        {
+            await window.alert('Employee added Scuccessfully');
+            window.location.replace('http://localhost:3000/clientloginoption')
+        }
     }
 
     useEffect(() => {
@@ -87,8 +97,11 @@ function Add_Client() {
                             </div>
                         </div >
                         <div className='Client-content-div'>
-                            <div className='Client-content-2'>
+                            <div className='Client-content-1'>
                                 <input className='Client-Input' type='text' value={TypeClient} placeholder="Type Of Poperty" onChange={(e) => changeTypeClient(e.target.value)} ></input>
+                            </div>
+                            <div className='Client-content-1'>
+                                <input className='Client-Input' type='text' value={EmpId} placeholder="Employee" onChange={(e) => setEmpId(e.target.value)} ></input>
                             </div>
                         </div>
                         <div className='Client-content-div'>
@@ -113,7 +126,7 @@ function Add_Client() {
                         </div>
                     </div>
                 </div>
-                <button className='Client-submit-button' type='submit' form="client-form">Submit</button>
+                <button className='Client-submit-button' type='submit'>Submit</button>
             </form>
         </div>
     )

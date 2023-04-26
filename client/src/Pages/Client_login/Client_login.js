@@ -27,7 +27,7 @@ function Clientlogin() {
             setMessage(json.msg);
         }
         else{
-            window.location.replace('http://localhost:3000/clientoptions')
+            window.location.replace('http://localhost:3000/clientAfterLogin')
         }
         console.log(json);
 
