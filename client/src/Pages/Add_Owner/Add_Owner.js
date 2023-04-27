@@ -80,7 +80,7 @@ function Add_Owner() {
 
     return (
         <div className='Owner_Registeration'>
-            <div className='Owner-Registeration-div'>
+            <form className='Owner-Registeration-div' id="ownerform" onSubmit={handleForm}>
                 <div className='register_details'>
                     <div className='register-content-owner'> Owner registeration</div>
                     <div className='Div-line'>
@@ -92,7 +92,7 @@ function Add_Owner() {
 
                     </div>
                 </div>
-                <form className='Owner-registeration-form' id="ownerform" onSubmit={handleForm} >
+                <div className='Owner-registeration-form'  >
                     <div className='Owner_FirstPage' style={{ left: `${Div1PosOwner}%` }}>
                         <div className='Owner-content-div'>
                             <div className='Owner-content-1'>
@@ -166,14 +166,15 @@ function Add_Owner() {
 
 
                         </div>
-                    <button className='Owner-submit-button' type='submit' form="ownerform" style={{ opacity: `${Opacity1Owner}` }}>Submit</button>
+                    
                     </div>
-                </form>
+                </div>
                 <div className='Owner-Buttons'>
                     <button className='Owner-back-button' onClick={ChangePos1Owner} style={{ opacity: `${Opacity1Owner}` }}>BACK</button>
+                    <button className='Owner-back-button' type='submit' form="ownerform" style={{ opacity: `${Opacity1Owner}` }}>SUBMIT</button>
                     <button className='Owner-back-button' onClick={ChangePosOwner} style={{ opacity: `${OpacityOwner}` }}>NEXT</button>
                 </div>
-            </div>
+            </form>
         </div>
     )
 };

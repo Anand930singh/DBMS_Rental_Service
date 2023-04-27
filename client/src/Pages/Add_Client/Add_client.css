@@ -7,7 +7,7 @@
     position: absolute;
     height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -18,7 +18,7 @@
 .Client-Registeration-div {
     height: 70vh;
     width: 40vw;
-    background:linear-gradient(to right,rgb(134, 51, 167),rgb(29, 8, 75));
+    background-color: #13232f;
     position: relative;
     box-sizing: border-box;
     border-style: solid;
@@ -148,31 +148,51 @@
     border-style: solid;
     border-color: #a0b3b0;
     overflow: hidden;
-    padding: 0rem 1rem;
+    padding: 0rem 0.5rem;
     box-sizing: border-box;
     border-width: 1px;
     border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 
 }
 
 .Client-content-2 {
     height: 80%;
     width: 100%;
-    padding: 0rem 1rem;
+    padding: 0rem 0.5rem;
     box-sizing: border-box;
     overflow: hidden;
     border-style: solid;
     border-color: #a0b3b0;
     border-width: 1px;
     border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .Client-Input {
     height: 80%;
-    width: 100%;
+    width: 88%;
+    background: transparent;
+    background-color: none;
+    color: #a0b3b0;
+    outline: none;
+    font-size: 1rem;
+    border: none;
+}
+.Client-Input-2 {
+    height: 80%;
+    width: 95%;
     background: transparent;
     background-color: none;
     outline: none;
+    color: #a0b3b0;
+    font-size: 1rem;
     border: none;
 }
 .Client-SecondPage
