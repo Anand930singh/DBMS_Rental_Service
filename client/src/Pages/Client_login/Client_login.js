@@ -4,7 +4,7 @@ import './client_login.css'
 function Clientlogin() {
     const [id, setId]=useState('');
     const [pass,setPass]= useState('');
-    const [userTyp,setUsertyp]=useState('A');
+    const [userTyp,setUsertyp]=useState('C');
     const [message,setMessage]=useState('');
 
     

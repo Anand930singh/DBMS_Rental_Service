@@ -18,8 +18,14 @@ app.use('/branchForm',require('./Routes/BranchForm'));
 //Admin Login
 app.use('/adminLogin',require('./Routes/AdminLogin'));
 
-//Admin Login
+//Client Login
 app.use('/clientLogin',require('./Routes/ClientLogin'));
+
+//Owner Login
+app.use('/ownerLogin',require('./Routes/OwnerLogin'));
+
+//See property by client
+app.use('/seePropClient',require('./Routes/SeePropClient'));
 
 //Add Staff
 app.use('/addStaff',require('./Routes/AddEmploye'));
@@ -38,6 +44,11 @@ app.use('/clientReg',require('./Routes/ClientReg'));
 
 //Add Property
 app.use('/addProperty',require('./Routes/AddProperty'));
+
+//Comments
+app.use('/comments',require('./Routes/Comments'));
+
+
 
 
 

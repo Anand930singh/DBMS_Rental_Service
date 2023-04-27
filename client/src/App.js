@@ -15,6 +15,9 @@ import Staff_login from './Pages/Staff_Login/Staf_Login'
 import Owner_login_options from './Pages/Owner_login_options/Owner_login_options'
 import Client_login_options from './Pages/Client_login_options/Client_login_options'
 import Client_after_login_options from './Pages/ClientAfterLoginOption/client_after_login_option'
+import QueryProperty from './Pages/Query_page/Query_page'
+import Comments from './Pages/Comments/Comments'
+import AllBranch from './Pages/AllBranch/AllBranch'
 
 import Add_Property from './Pages/Add_Property/Add_Property'
 function App() {
@@ -37,6 +40,9 @@ function App() {
       <Route path="/clientloginoption" element={<Client_login_options />}></Route>
       <Route path="/propertyadd" element={<Add_Property />}></Route>
       <Route path="/clientAfterLogin" element={<Client_after_login_options/>}></Route>
+      <Route path="/queryProperty" element={<QueryProperty/>}></Route>
+      <Route path="/comments" element={<Comments/>}></Route>
+      <Route path="/allbranch" element={<AllBranch/>}></Route>
       </Routes>
     </Router>
   );

@@ -3,7 +3,7 @@ import './client_after_login_options.css'
 function Client_after_login_options() {
 
   const handleQuery=()=>{
-    window.location.replace('http://localhost:3000/staffadd')
+    window.location.replace('http://localhost:3000/queryProperty')
   }
 
   return (
