@@ -121,7 +121,12 @@
     border-style: solid;
     border-color: #a0b3b0;
     overflow: hidden;
-    padding: 0rem 1rem;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 0.5rem;
     box-sizing: border-box;
     border-width: 1px;
     border-radius: 5px;
@@ -131,7 +136,12 @@
 .Property-content-2 {
     height: 80%;
     width: 100%;
-    padding: 0rem 1rem;
+    padding: 0rem 0.5rem;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     box-sizing: border-box;
     overflow: hidden;
     border-style: solid;
@@ -143,6 +153,14 @@
 .Property-Input {
     height: 80%;
     width: 100%;
+    background-color: #13232f;
+    outline: none;
+    border: none;
+}
+.Property-Input-1 {
+    height: 80%;
+    width: 100%;
+    padding: 0rem 0.7rem;
     background-color: #13232f;
     outline: none;
     border: none;

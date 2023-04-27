@@ -6,7 +6,7 @@ function Query_page() {
     const[type,Settype]=useState(null);
     const[City,Setcity]=useState("");
   return (
-    <div>
+    <div  className='query-page'>
          <form  className='property-search-form'>
             <input type="text"  value={rooms} placeholder="no of rooms" onChange={(e)=>Setrooms(e.target.value)}></input>
             <input type="Integer" value={rent} placeholder="rent" onChange={(e)=>Setrent(e.target.value)}></input>

@@ -16,6 +16,7 @@ import Owner_login_options from './Pages/Owner_login_options/Owner_login_options
 import Client_login_options from './Pages/Client_login_options/Client_login_options'
 
 import Add_Property from './Pages/Add_Property/Add_Property'
+import Query from './Pages/Query_page/Query_page'
 function App() {
   return (
     <Router>
@@ -35,6 +36,7 @@ function App() {
       <Route path="/ownerloginoption" element={<Owner_login_options />}></Route>
       <Route path="/clientloginoption" element={<Client_login_options />}></Route>
       <Route path="/propertyadd" element={<Add_Property />}></Route>
+      <Route path="/Query" element={<Query />}></Route>
       </Routes>
     </Router>
   );

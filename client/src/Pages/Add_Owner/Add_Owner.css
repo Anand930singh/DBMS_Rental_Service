@@ -87,6 +87,7 @@
     position: relative;
     height: 80%;
     text-align: center;
+    width: fit-content;
     /* color: white; */
     display: flex;
     margin-top: 1rem;
@@ -127,7 +128,7 @@
     box-sizing: border-box;
 }
 .Owner-content-div {
-    height: 20%;
+    height: 24%;
     width: 100%;
     display: flex;
     overflow: hidden;
@@ -191,6 +192,7 @@
 .Owner-back-button {
     height: 50%;
     width: 13%;
+    padding: 0.5rem;
     background-color: #13232f;
     border-style: solid;
     border-color: #a0b3b0;
