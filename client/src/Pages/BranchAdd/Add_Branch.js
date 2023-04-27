@@ -24,67 +24,70 @@ function Add_Branch() {
             }),
             headers: { 'Content-type': 'application/json' },
         });
-        const json2=await response.json();
-        if(json2.status==='SUCCESS')
-        {
-             window.alert('Branch added Scuccessfully');
+        const json2 = await response.json();
+        if (json2.status === 'SUCCESS') {
+            window.alert('Branch added Scuccessfully');
             window.location.replace('http://localhost:3000/adminoptions')
         }
     }
 
 
     return (
-        <div className='e-login_1' >
-            <form className='login-form_1' onSubmit={handleForm}>
-                <div className='main-container_1'>
-                    <div className='reg-con_1' id='reg-con_1' >
-                        <div className="register_1"> <div> Add Branch<br /></div></div>
-                        <div className='content-1_1'>
-                           
-                            <div className='sub-content-1_1'>
+        <div className='e-login_1-branch' >
+            <form className='login-form_1-branch' onSubmit={handleForm}>
+                <div className='main-container_1-branch'>
+                    <div className='reg-con_1-branch' id='reg-con_1' >
+                        <div className="register_1-branch">  Add Branch<br /></div>
+                        <div className='content-1_1-branch'>
 
-                                <input className='inp_1' type='text' value={Street} placeholder="Street Name" onChange={(e) => changeStreet(e.target.value)} ></input>
+                            <div className='sub-content-1_1-branch'>
+                                <span class="material-symbols-outlined">
+                                    person
+                                </span>
+                                <input className='inp_1-branch-1' type='text' value={Street} placeholder="Street Name" onChange={(e) => changeStreet(e.target.value)} ></input>
+                            </div>
+                            <div className='sub-content-1_1-branch'>
+                                <span class="material-symbols-outlined">
+                                    person
+                                </span>
+                                <input className='inp_1-branch-1' type='text' value={City} placeholder="City" onChange={(e) => changeCity(e.target.value)} ></input>
                             </div>
 
                         </div >
-                        <div className='content-1_1'>
-                            <div className='sub-content-2_1'>
-                                {/* <span class="material-symbols-outlined">
-                                    person
-                                </span> */}
-                                <input className='inp_1' type='text' value={City} placeholder="City" onChange={(e) => changeCity(e.target.value)} ></input>
+
+                        <div className='content-1_1-branch'>
+                            <div className='sub-content-2_1-branch'>
+                                <span class="material-symbols-outlined">
+                                    <span class="material-symbols-outlined">
+                                        home_pin
+                                    </span>
+                                </span>
+                                <input className='inp_1-branch' type='text' value={PostCode1} placeholder="Post Code" onChange={(e) => changePostCode1(e.target.value)} ></input>
                             </div>
 
                         </div>
-
-                        <div className='content-1_1'>
-                            <div className='sub-content-2_1'>
-                                {/* <span class="material-symbols-outlined">
+                        <div className='content-1_1-branch'>
+                            <div className='sub-content-2_1-branch'>
+                                <span class="material-symbols-outlined">
                                     person
-                                </span> */}
-                                <input className='inp_1' type='text' value={PostCode1} placeholder="Post Code" onChange={(e) => changePostCode1(e.target.value)} ></input>
+                                </span>
+                                <input className='inp_1-branch' type='text' value={BranchContact} placeholder="Branch Contact" onChange={(e) => changeContact(e.target.value)} ></input>
                             </div>
 
                         </div>
-                        <div className='content-1_1'>
-                            <div className='sub-content-2_1'>
-                                <input className='inp_1' type='text' value={BranchContact} placeholder="Branch Contact" onChange={(e) => changeContact(e.target.value)} ></input>
-                            </div>
-
-                        </div>
-                        <div className='content-1_1'>
-                            <div className='sub-content-2_1'>
-                                {/* <span class="material-symbols-outlined">
+                        <div className='content-1_1-branch'>
+                            <div className='sub-content-2_1-branch'>
+                                <span class="material-symbols-outlined">
                                     person
-                                </span> */}
-                                <input className='inp_1' type='text' value={Mid} placeholder="Manager Id (Not Necessary *)" onChange={(e) => changeMid(e.target.value)} ></input>
+                                </span>
+                                <input className='inp_1-branch' type='text' value={Mid} placeholder="Manager Id (Not Necessary *)" onChange={(e) => changeMid(e.target.value)} ></input>
                             </div>
 
                         </div>
                     </div>
                 </div>
-                <div className='Buttons1_1'>
-                    <button className='submit-button_1' type='submit' >SUBMIT</button>
+                <div className='Buttons1_1-branch'>
+                    <button className='submit-button_1-branch' type='submit' >SUBMIT</button>
                 </div>
             </form>
         </div>

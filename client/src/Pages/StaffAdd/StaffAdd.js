@@ -86,26 +86,33 @@ function Employeelogin() {
             <form className='login-form' onSubmit={handleForm}>
                 <div className='main-container'>
                     <div className='reg-con' id='reg-con' style={{ left: `${Div1Pos}%` }}>
-                        <div className="register"> <div> Staff Registration <br /></div></div>
+                        <div className="register">  Staff Registration <br /></div>
                         <div className='content-1'>
                             <div className='sub-content-1'>
-                                <input className='inp' type='text' value={Name} placeholder="FirstName" onChange={(e) => changeName(e.target.value)} ></input>
+                            <span class="material-symbols-outlined">
+                                    edit_calendar
+                                </span>
+                                <input className='inp1' type='text' value={Name} placeholder="FirstName" onChange={(e) => changeName(e.target.value)} ></input>
                             </div>
                             <div className='sub-content-1'>
-
-                                <input className='inp' type='text' value={LastName} placeholder="LastName" onChange={(e) => changelname(e.target.value)} ></input>
+                            <span class="material-symbols-outlined">
+                                    edit_calendar
+                                </span>
+                                <input className='inp1' type='text' value={LastName} placeholder="LastName" onChange={(e) => changelname(e.target.value)} ></input>
                             </div>
 
                         </div >
                      
                         <div className='content-1'>
                             <div className='sub-content-2'>
-                                <img src={Image4}></img>
+                            <span class="material-symbols-outlined">
+                                    edit_calendar
+                                </span>
                                 <select className='select' value={SEX} onChange={(e) => changeSex(e.target.value)}>
-                                    <option value="" >Select Gender</option>
-                                    <option value="M" >MALE</option>
-                                    <option value="F">Female</option>
-                                    <option value="o">Others</option>
+                                    <option value="" >  Select Gender</option>
+                                    <option value="M" >  MALE</option>
+                                    <option value="F">  Female</option>
+                                    <option value="o">  Others</option>
                                 </select>
                             </div>
                         </div>
@@ -136,11 +143,14 @@ function Employeelogin() {
                     <div className='reg-con-1' id='reg-con-1' style={{ left: `${Div1Pos1}%`, opaacity: `${Opacity1}` }}>
                         <div class='reg-con1'>
                             <div className='other-detail'>
-                                <div> Other Details
-                                    <br /></div>
+                                 Other Details
+                                    <br />
                             </div>
                             <div className='content-1'>
                                 <div className='sub-content-2'>
+                                <span class="material-symbols-outlined">
+                                    edit_calendar
+                                </span>
                                     {/* <input className='inp' type='text' value={BranchId} placeholder="Branch Id" onChange={(e) => changeBranch(e.target.value)} ></input> */}
                                     <select
                                     className='inp'
@@ -158,30 +168,40 @@ function Employeelogin() {
                             </div>
                             <div className='content-1'>
                                 <div className='sub-content-2'>
+                                <span class="material-symbols-outlined">
+                                    edit_calendar
+                                </span>
                                     <input className='inp' type='date' value={start_Date} onChange={(e) => changeStartDate(e.target.value)} />
                                 </div>
                             </div>
                             <div className='content-1'>
                                 <div className='sub-content-2'>
+                                <span class="material-symbols-outlined">
+                                    edit_calendar
+                                </span>
                                     <input className='inp' type='text' value={Supervisior} placeholder="Supervisior Id" onChange={(e) => changeSupervisior(e.target.value)} ></input>
                                 </div>
                             </div>
                             <div className='content-1'>
                                 <div className='sub-content-2'>
+                                <span class="material-symbols-outlined">
+                                    edit_calendar
+                                </span>
                                     <input className='inp' type='text' value={salary} placeholder="Salary" onChange={(e) => changeSalary(e.target.value)} ></input>
                                 </div>
                             </div>
                             {message &&(
                     <p style="color: red; font-size: 12px;">{message}</p>
                   )}
-                            <button className='submit-button' type='submit' style={{ opacity: `${Opacity1}` }}>submit</button>
+                           
                         </div>
                     </div>
-                    <div class='reg-con2'></div>
                 </div>
                 <div className='Buttons'>
                     <button className='back-button' onClick={ChangePos1} style={{ opacity: `${Opacity1}` }}>BACK</button>
+                    <button className='back-button' type='submit' style={{ opacity: `${Opacity1}` }}>SUBMIT</button>
                     <button className='back-button' onClick={ChangePos} style={{ opacity: `${Opacity}` }}>NEXT</button>
+
                 </div>
             </form>
 

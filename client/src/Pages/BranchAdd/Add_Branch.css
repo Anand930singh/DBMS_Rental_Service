@@ -8,7 +8,7 @@
     justify-content: center; */
 }
 
-.e-login_1
+.e-login_1-branch
 {
     position: absolute;
     /* margin: 20vh 30vw; */
@@ -22,14 +22,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-image: linear-gradient(to right, #434343 0%, #13232f 100%);
    
 }
-.login-form_1
+.login-form_1-branch
 {
-    height: 70vh;
-    width: 50vw;
+    height: 65vh;
+    width: 42vw;
     /* background-image: url('./Images/back.jpg'); */
-    background-color: #13232f;
+    /* background-color: #13232f; */
+    background-image: linear-gradient(to right,#13232f  0%,  #434343 100%);
+
     /* background-color: black; */
     position: relative;
     box-sizing: border-box;
@@ -45,7 +48,7 @@
     align-items: center;
     justify-content: center;
 }
-.back-button_1
+.back-button_1-branch
 {
     position: relative;
     outline: none;
@@ -61,8 +64,9 @@
     border-radius: 5rem;
     transition: opacity 0.5s ease-in;
     background-color: #13232f;
+   
 }
-.Button
+.Button-branch
 {
     width: 100%;
     height: 13%;
@@ -72,17 +76,17 @@
     justify-content: space-between;
 
 }
-.Buttons1_1
+.Buttons1_1-branch
 {
     width: 100%;
-    height: 13%;
+    height: 20%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 
 }
-.submit-button_1
+.submit-button_1-branch
 {
     width: 18%;
     height: 60%;
@@ -101,24 +105,24 @@
 {
     color: rgb(188, 188, 192);
 }
-.submit-button_1:hover
+.submit-button_1-branch:hover
 {
     color: #13232f;
     background-color: rgb(188, 188, 192);
     border-color: #13232f;
 }
-.back-button_1:hover
+.back-button_1-branch:hover
 {
     color: #13232f;
     background-color: rgb(188, 188, 192);
     border-color: #13232f;
 }
-.back-button_1 img{
+.back-button_1-branch img{
  object-fit: contain;
  height: 80%;
  width:80%;
 }
-.reg-con_1
+.reg-con_1-branch
 {
     height: 100%;
     width: 100%;
@@ -135,12 +139,12 @@
     justify-content: center;
     transition: ease-in 0.5s;
 }
-.main-container_1
+.main-container_1-branch
 {
-    height: 87%;
+    height: 80%;
     width:100%
 }
-.register_1
+.register_1-branch
 {
     text-align: center;
     display: flex;
@@ -152,7 +156,7 @@
     height: 60%;
     width: 100%;
 }
-.content-1_1 
+.content-1_1-branch 
 {
     position: relative;
     height: 30%;
@@ -163,12 +167,13 @@
     align-items: center;
     justify-content: space-around;
 }
-.sub-content-1_1 
+.sub-content-1_1-branch 
 {
     height: 100%;
     width: 48%;
     display: flex;
     border-style: solid ;
+    padding: 0% 1%;
     border-color: rgb(188, 188, 192);
     border-width: 1px;
     border-radius: 5px;
@@ -177,8 +182,9 @@
     align-items: center;
     /* margin:0% 0% 0% 2%; */
     justify-content: flex-start;
+    box-sizing: border-box;
 }
-.sub-content-2_1
+.sub-content-2_1-branch
 {
     
         height: 100%;
@@ -193,17 +199,10 @@
         flex-direction: row;
         align-items: center;
         /* margin:0% 0% 0% 2%; */
-        justify-content: flex-start;
+        justify-content: space-between;
         box-sizing: border-box;
 }
-.sub-content-2_1 img{
-    height: 80%;
-    width: 5%;
-    background-color: #13232f;
-    /* background-color: black; */
-    object-fit: contain;
-}
-.content-info_1
+.content-info_1-branch
 {
     position: relative;
    height: 15%;
@@ -211,12 +210,32 @@
    text-align: left;
    
 }
-.inp_1{
-    padding: 0% 0% 0% 4%;
+.inp_1-branch{
+    padding: 0% ;
+    /* margin-left:1%; */
     height:80%;
+    margin: 1vw;
     box-sizing: border-box;
-    width: 100%;
-    background-color: #13232f;
+    width: 95%;
+    /* background-color: #13232f; */
+    background: none;
+    color:  #a0b3b0;
+    /* border-style: solid; */
+    outline: none;
+    border: none;
+    /* border-radius: 20%; */
+    position: relative;
+   
+}
+.inp_1-branch-1{
+    padding: 0% 0% 0% 4%;
+    /* margin-left:1%; */
+    height:80%;
+    margin: 0.8vw;
+    box-sizing: border-box;
+    width: 80%;
+    /* background-color: #13232f; */
+    background: none;
     color:  #a0b3b0;
     /* border-style: solid; */
     outline: none;
@@ -231,7 +250,7 @@
 input[type=date]:focus::-webkit-datetime-edit {
     color: black !important;
 } */
-.select_1 {
+.select_1-branch {
     padding: 0% 0% 0% 3%;
     height:80%;
     box-sizing: border-box;

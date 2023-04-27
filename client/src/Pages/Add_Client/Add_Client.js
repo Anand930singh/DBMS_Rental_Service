@@ -14,11 +14,11 @@ function Add_Client() {
     const [TypeClient, changeTypeClient] = useState('');
     const [ClientEmail, changeClientEmail] = useState('');
     const [ClientContact, changeClientContact] = useState('');
-    const [currentDate, setCurrentDate] = useState(new Date().toLocaleDateString());
+    const [currentDate, setCurrentDate] = useState(new Date());
     const [branchId,setBranchId]=useState('');
-    const [EmpId,setEmpId]=useState('');
     const [data, setData] = useState([]);
     const [DOB, setDOB] = useState('');
+    const [EmpId,setEmpId]=useState('');
 
 
     // const [ClientTelPhoneNumber, changeClientTelNumber] = useState('');
@@ -79,25 +79,34 @@ function Add_Client() {
                     <div className='Client_FirstPage' style={{ left: `${Div1PosClient}%` }}>
                         <div className='Client-content-div'>
                             <div className='Client-content-1'>
+                                <span class="material-symbols-outlined">
+                                    person
+                                </span>
                                 <input className='Client-Input' type='text' value={FirstNameClient} placeholder="FirstName" onChange={(e) => changeNameClient(e.target.value)} ></input>
                             </div>
                             <div className='Client-content-1'>
-
+                                <span class="material-symbols-outlined">
+                                    person
+                                </span>
                                 <input className='Client-Input' type='text' value={LastNameClient} placeholder="LastName" onChange={(e) => changelnameClient(e.target.value)} ></input>
                             </div>
 
                         </div >
                         <div className='Client-content-div'>
-                            <div className='Client-content-1'>
+                            <div className='Client-content-1'> <span class="material-symbols-outlined">
+                                contact_phone
+                            </span>
                                 <input className='Client-Input' type='text' value={ClientEmail} placeholder="Contact No." onChange={(e) => changeClientEmail(e.target.value)} ></input>
                             </div>
                             <div className='Client-content-1'>
-
+                                <span class="material-symbols-outlined">
+                                    mail
+                                </span>
                                 <input className='Client-Input' type='text' value={ClientContact} placeholder="Email" onChange={(e) => changeClientContact(e.target.value)} ></input>
                             </div>
                         </div >
                         <div className='Client-content-div'>
-                            <div className='Client-content-1'>
+                            <div className='Client-content-2'>
                                 <input className='Client-Input' type='text' value={TypeClient} placeholder="Type Of Poperty" onChange={(e) => changeTypeClient(e.target.value)} ></input>
                             </div>
                             <div className='Client-content-1'>
@@ -105,22 +114,30 @@ function Add_Client() {
                             </div>
                         </div>
                         <div className='Client-content-div'>
-                            <div className='Client-content-2'>
-                            <select className='Owner-Input' value={branchId} placeholder="Branch No" onChange={(e) => setBranchId(e.target.value)}>
-                                {data.map((item, index) => (
+                            <div className='Client-content-2'> <span class="material-symbols-outlined">
+                                business_center
+                            </span>
+                                <select className='Client-Input-2' value={branchId} placeholder="Branch No" onChange={(e) => setBranchId(e.target.value)}>
+                                    {data.map((item, index) => (
                                         <option key={index} value={item.Branch_no}>
-                                            {item.Branch_no+' ('+item.Street+' '+item.City+'  '+item.Postcode+')'}
+                                            {item.Branch_no + ' (' + item.Street + ' ' + item.City + '  ' + item.Postcode + ')'}
                                         </option>
                                     ))}
                                 </select>
                             </div>
                         </div>
                         <div className='Client-content-div'>
-                            <div className='Client-content-1'>
-                                    <input className='Client-Input' type='text' value={MaxRentClient} placeholder="Max Rent" onChange={(e) => changeMaxRentClient(e.target.value)} ></input>
+                            <div className='Client-content-1'> <span class="material-symbols-outlined">
+                                <span class="material-symbols-outlined">
+                                    currency_rupee
+                                </span>
+                            </span>
+                                <input className='Client-Input' type='text' value={MaxRentClient} placeholder="Max Rent" onChange={(e) => changeMaxRentClient(e.target.value)} ></input>
                             </div>
                             <div className='Client-content-1'>
-
+                                <span class="material-symbols-outlined">
+                                    cake
+                                </span>
                                 <input className='Client-Input' type='date' value={DOB} placeholder="DOB" onChange={(e) => setDOB(e.target.value)} ></input>
                             </div>
                         </div>

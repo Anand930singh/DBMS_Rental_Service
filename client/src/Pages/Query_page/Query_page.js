@@ -6,7 +6,7 @@ function Query_page() {
     const[type,Settype]=useState("");
     const[City,Setcity]=useState("");
 
-    const [prop,setProp]= useState("");
+    const [prop,setProp]= useState([]);
   
   const handleSubmit=async(e)=>{
     e.preventDefault();
@@ -53,7 +53,6 @@ function Query_page() {
                 <th>City</th>
                 <th>Postcode</th>
                 <th>Employee ID</th>
-                <th>Employee ID</th>
               </tr>
             </thead>
             <tbody>
@@ -68,7 +67,6 @@ function Query_page() {
                   <td>{property.City}</td>
                   <td>{property.Postcode}</td>
                   <td>{property.Eid}</td>
-                  <td>{property.Stat}</td>
                 </tr>
               ))}
             </tbody>

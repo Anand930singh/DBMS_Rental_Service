@@ -18,8 +18,12 @@ import Client_after_login_options from './Pages/ClientAfterLoginOption/client_af
 import QueryProperty from './Pages/Query_page/Query_page'
 import Comments from './Pages/Comments/Comments'
 import AllBranch from './Pages/AllBranch/AllBranch'
+import AfterStaffLogin from './Pages/StaffAfterLoginController/staff_after_login_option'
+import PropertyUnderStaff from './Pages/PropertyUnderStaff/PropertUnderStaff'
+import ClientUnderStaff from './Pages/ClientUnderStaff/ClientUnderStaff'
 
 import Add_Property from './Pages/Add_Property/Add_Property'
+import Query from './Pages/Query_page/Query_page'
 function App() {
   return (
     <Router>
@@ -43,6 +47,10 @@ function App() {
       <Route path="/queryProperty" element={<QueryProperty/>}></Route>
       <Route path="/comments" element={<Comments/>}></Route>
       <Route path="/allbranch" element={<AllBranch/>}></Route>
+      <Route path="/Query" element={<Query />}></Route>
+      <Route path="/afterStaffLogin" element={<AfterStaffLogin />}></Route>
+      <Route path="/propertyUnderStaff" element={<PropertyUnderStaff />}></Route>
+      <Route path="/clientUnderStaff" element={<ClientUnderStaff />}></Route>
       </Routes>
     </Router>
   );

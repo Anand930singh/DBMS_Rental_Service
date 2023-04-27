@@ -12,12 +12,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-image: linear-gradient(to right, #434343 0%, #13232f 100%);
 }
 
 .Owner-Registeration-div {
     height: 70vh;
     width: 40vw;
-    background-color: #13232f;
+    background-image: linear-gradient(to right,#13232f  0%,  #434343 100%);
     position: relative;
     box-sizing: border-box;
     border-style: solid;
@@ -87,6 +88,7 @@
     position: relative;
     height: 80%;
     text-align: center;
+    width: fit-content;
     /* color: white; */
     display: flex;
     margin-top: 1rem;
@@ -127,7 +129,7 @@
     box-sizing: border-box;
 }
 .Owner-content-div {
-    height: 20%;
+    height: 24%;
     width: 100%;
     display: flex;
     overflow: hidden;
@@ -144,7 +146,12 @@
     border-style: solid;
     border-color: #a0b3b0;
     overflow: hidden;
-    padding: 0rem 1rem;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 0.5rem;
     box-sizing: border-box;
     border-width: 1px;
     border-radius: 5px;
@@ -154,19 +161,35 @@
 .Owner-content-2 {
     height: 80%;
     width: 100%;
-    padding: 0rem 1rem;
+    padding: 0rem 0.5rem;
     box-sizing: border-box;
     overflow: hidden;
     border-style: solid;
     border-color: #a0b3b0;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     border-width: 1px;
     border-radius: 5px;
 }
 
 .Owner-Input {
     height: 80%;
-    width: 100%;
-    background-color: #13232f;
+    width: 90%;
+    margin: 0%;
+    color: #a0b3b0;
+    background: none;
+    outline: none;
+    border: none;
+}
+.Owner-Input-2 {
+    height: 80%;
+    width: 95%;
+    margin: 0%;
+    color: #a0b3b0;
+    background: none;
     outline: none;
     border: none;
 }
@@ -191,6 +214,7 @@
 .Owner-back-button {
     height: 50%;
     width: 13%;
+    padding: 0.5rem;
     background-color: #13232f;
     border-style: solid;
     border-color: #a0b3b0;
