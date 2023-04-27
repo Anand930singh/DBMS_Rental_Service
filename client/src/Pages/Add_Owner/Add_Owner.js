@@ -95,47 +95,65 @@ function Add_Owner() {
                 <div className='Owner-registeration-form'  >
                     <div className='Owner_FirstPage' style={{ left: `${Div1PosOwner}%` }}>
                         <div className='Owner-content-div'>
-                            <div className='Owner-content-1'>
+                            <div className='Owner-content-1'><span class="material-symbols-outlined">
+                                person
+                            </span>
                                 <input className='Owner-Input' type='text' value={FirstNameOwner} placeholder="FirstName" onChange={(e) => changeNameOwner(e.target.value)} ></input>
                             </div>
                             <div className='Owner-content-1'>
-
+                                <span class="material-symbols-outlined">
+                                    person
+                                </span>
                                 <input className='Owner-Input' type='text' value={LastNameOwner} placeholder="LastName" onChange={(e) => changelnameOwner(e.target.value)} ></input>
                             </div>
 
                         </div >
                         <div className='Owner-content-div'>
-                            <div className='Owner-content-1'>
+                            <div className='Owner-content-1'><span class="material-symbols-outlined">
+                                Home
+                            </span>
                                 <input className='Owner-Input' type='text' value={OwnerStreet} placeholder="Street" onChange={(e) => changeOwnerStreet(e.target.value)} ></input>
                             </div>
                             <div className='Owner-content-1'>
-
+                                <span class="material-symbols-outlined">
+                                    location_city
+                                </span>
                                 <input className='Owner-Input' type='text' value={OwnerCity} placeholder="City" onChange={(e) => changeOwnerCity(e.target.value)} ></input>
                             </div>
                         </div>
                         <div className='Owner-content-div'>
-                            <div className='Owner-content-2'>
+                            <div className='Owner-content-2'><span class="material-symbols-outlined">
+                                <span class="material-symbols-outlined">
+                                    home_pin
+                                </span>
+                            </span>
 
-                                <input className='Owner-Input' type='text' value={OwnerPincode} placeholder="Pincode" onChange={(e) => changeOwnerPincode(e.target.value)} ></input>
+                                <input className='Owner-Input-2' type='text' value={OwnerPincode} placeholder="Pincode" onChange={(e) => changeOwnerPincode(e.target.value)} ></input>
                             </div>
 
                         </div>
                         <div className='Owner-content-div'>
-                            <div className='Owner-content-2'>
+                            <div className='Owner-content-2'><span class="material-symbols-outlined">
+                            contact_phone
+                            </span>
 
-                                <input className='Owner-Input' type='text' value={TelPhoneNumber} placeholder="TelephoneNumber" onChange={(e) => changeTelNumber(e.target.value)} ></input>
+                                <input className='Owner-Input-2' type='text' value={TelPhoneNumber} placeholder="TelephoneNumber" onChange={(e) => changeTelNumber(e.target.value)} ></input>
                             </div>
                         </div>
                     </div>
                     <div className='Owner-SecondPage' style={{ left: `${Div1Pos1Owner}%` }}>
                         <div className='Owner-content-div'>
                             <div className='Owner-content-2'>
-
+                                <span class="material-symbols-outlined">
+                                    <span class="material-symbols-outlined">
+                                        business_center
+                                    </span>
+                                </span>
                                 {/* <input className='Owner-Input' type='text' value={OwnerBranchNo} placeholder="Branch No" onChange={(e) => changeOwnerBranchNo(e.target.value)} ></input> */}
-                                <select className='Owner-Input' value={OwnerBranchNo} placeholder="Branch No" onChange={(e) => changeOwnerBranchNo(e.target.value)}>
-                                {data.map((item, index) => (
+                                <select className='Owner-Input-2' value={OwnerBranchNo} placeholder="Branch No" onChange={(e) => changeOwnerBranchNo(e.target.value)}>
+                                    {data.map((item, index) => (
                                         <option key={index} value={item.Branch_no}>
-                                            {item.Branch_no+' ('+item.Street+' '+item.City+'  '+item.Postcode+')'}
+                                            {item.Branch_no + ' (' + item.Street + ' ' + item.City + '  ' + item.Postcode + ')'}
                                         </option>
                                     ))}
                                 </select>
@@ -144,29 +162,37 @@ function Add_Owner() {
                         </div>
                         <div className='Owner-content-div'>
                             <div className='Owner-content-1'>
-
+                                <span class="material-symbols-outlined">
+                                    person
+                                </span>
                                 <input className='Owner-Input' type='text' value={OwnerContactName} placeholder="Contact Name" onChange={(e) => changeOwnerContact(e.target.value)} ></input>
                             </div>
                             <div className='Owner-content-1'>
-
+                                <span class="material-symbols-outlined">
+                                    cake
+                                </span>
                                 <input className='Owner-Input' type='date' value={ownerDob} placeholder="DOB" onChange={(e) => changeOwnerdob(e.target.value)} ></input>
                             </div>
                         </div>
                         <div className='Owner-content-div'>
                             <div className='Owner-content-2'>
-
-                                <input className='Owner-Input' type='text' value={OwnerBusiness} placeholder="Business" onChange={(e) => changeOwnerBusiness(e.target.value)} ></input>
+                                <span class="material-symbols-outlined">
+                                business_center
+                                </span>
+                                <input className='Owner-Input-2' type='text' value={OwnerBusiness} placeholder="Business" onChange={(e) => changeOwnerBusiness(e.target.value)} ></input>
                             </div>
                         </div>
                         <div className='Owner-content-div'>
-                            <div className='Owner-content-2'>
+                            <div className='Owner-content-2'><span class="material-symbols-outlined">
+                                mail
+                            </span>
 
-                                <input className='Owner-Input' type='email' value={OwnerEmail} placeholder="Email" onChange={(e) => changeOwnerEmail(e.target.value)} ></input>
+                                <input className='Owner-Input-2' type='email' value={OwnerEmail} placeholder="Email" onChange={(e) => changeOwnerEmail(e.target.value)} ></input>
                             </div>
 
 
                         </div>
-                    
+
                     </div>
                 </div>
                 <div className='Owner-Buttons'>
