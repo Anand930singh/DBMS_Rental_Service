@@ -53,13 +53,15 @@ function Add_Property() {
                     <div className='Property-content-div'>
                     <div className='Property-content-1'>
                     <span class="material-symbols-outlined">
-                                    person
+                    <span class="material-symbols-outlined">
+location_on
+</span>
                                 </span>
                             <input className='Property-Input-1' type='text' value={PropertyStreet} placeholder="Street" onChange={(e) => changePropertyStreet(e.target.value)} ></input>
                         </div>
                         <div className='Property-content-1'>
                         <span class="material-symbols-outlined">
-                                    person
+                        location_city
                                 </span>
                             <input className='Property-Input-1' type='text' value={PropertyCity} placeholder="City" onChange={(e) => changePropertyCity(e.target.value)} ></input>
                         </div>
@@ -67,7 +69,9 @@ function Add_Property() {
                     <div className='Property-content-div'>
                         <div className='Property-content-2'>
                         <span class="material-symbols-outlined">
-                                    person
+                        <span class="material-symbols-outlined">
+home_pin
+</span>
                                 </span>
                             <input className='Property-Input' type='text' value={PropertyPincode} placeholder="Pincode" onChange={(e) => changePropertyPincode(e.target.value)} ></input>
                         </div>
@@ -76,7 +80,7 @@ function Add_Property() {
                     <div className='Property-content-div'>
                     <div className='Property-content-1'>
                     <span class="material-symbols-outlined">
-                                    person
+                                    house
                                 </span>
                             <input className='Property-Input-1' type='text' value={PropertyType} placeholder="Type" onChange={(e) => changePropertyType(e.target.value)} ></input>
                         </div>

@@ -84,27 +84,27 @@ function Add_Client() {
                         </div >
                         <div className='Client-content-div'>
                             <div className='Client-content-1'> <span class="material-symbols-outlined">
-                                person
+                                contact_phone
                             </span>
                                 <input className='Client-Input' type='text' value={ClientEmail} placeholder="Contact No." onChange={(e) => changeClientEmail(e.target.value)} ></input>
                             </div>
                             <div className='Client-content-1'>
                                 <span class="material-symbols-outlined">
-                                    person
+                                    mail
                                 </span>
                                 <input className='Client-Input' type='text' value={ClientContact} placeholder="Email" onChange={(e) => changeClientContact(e.target.value)} ></input>
                             </div>
                         </div >
                         <div className='Client-content-div'>
                             <div className='Client-content-2'> <span class="material-symbols-outlined">
-                                person
+                                house
                             </span>
                                 <input className='Client-Input-2' type='text' value={TypeClient} placeholder="Type Of Poperty" onChange={(e) => changeTypeClient(e.target.value)} ></input>
                             </div>
                         </div>
                         <div className='Client-content-div'>
                             <div className='Client-content-2'> <span class="material-symbols-outlined">
-                                person
+                                business_center
                             </span>
                                 <select className='Client-Input-2' value={branchId} placeholder="Branch No" onChange={(e) => setBranchId(e.target.value)}>
                                     {data.map((item, index) => (
@@ -117,13 +117,15 @@ function Add_Client() {
                         </div>
                         <div className='Client-content-div'>
                             <div className='Client-content-1'> <span class="material-symbols-outlined">
-                                person
+                                <span class="material-symbols-outlined">
+                                    currency_rupee
+                                </span>
                             </span>
                                 <input className='Client-Input' type='text' value={MaxRentClient} placeholder="Max Rent" onChange={(e) => changeMaxRentClient(e.target.value)} ></input>
                             </div>
                             <div className='Client-content-1'>
                                 <span class="material-symbols-outlined">
-                                    person
+                                    cake
                                 </span>
                                 <input className='Client-Input' type='date' value={DOB} placeholder="DOB" onChange={(e) => setDOB(e.target.value)} ></input>
                             </div>

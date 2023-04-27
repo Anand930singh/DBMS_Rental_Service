@@ -58,7 +58,9 @@ function Add_Branch() {
                         <div className='content-1_1-branch'>
                             <div className='sub-content-2_1-branch'>
                                 <span class="material-symbols-outlined">
-                                    person
+                                    <span class="material-symbols-outlined">
+                                        home_pin
+                                    </span>
                                 </span>
                                 <input className='inp_1-branch' type='text' value={PostCode1} placeholder="Post Code" onChange={(e) => changePostCode1(e.target.value)} ></input>
                             </div>
@@ -66,7 +68,7 @@ function Add_Branch() {
                         </div>
                         <div className='content-1_1-branch'>
                             <div className='sub-content-2_1-branch'>
-                            <span class="material-symbols-outlined">
+                                <span class="material-symbols-outlined">
                                     person
                                 </span>
                                 <input className='inp_1-branch' type='text' value={BranchContact} placeholder="Branch Contact" onChange={(e) => changeContact(e.target.value)} ></input>
