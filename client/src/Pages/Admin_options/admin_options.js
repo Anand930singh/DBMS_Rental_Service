@@ -18,7 +18,7 @@ function admin_options() {
         <div className='block'>
             <div onClick={handleAddStaffs}>Add Staffs</div>
             <div onClick={handleAddBranch}>Add Branch</div>
-            <div onClick={handleSeeBranch}>All Branchs</div>
+            <div onClick={handleSeeBranch}>All Branches</div>
         </div>
     </div>
   )

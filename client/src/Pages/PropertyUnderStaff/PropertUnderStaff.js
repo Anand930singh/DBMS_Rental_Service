@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 
 function PropertUnderStaff() {
 
-
     const [properties, setProperties] = useState([]);
 
     useEffect(() => {
@@ -63,10 +62,10 @@ function PropertUnderStaff() {
                                             display: 'flex',
                                             justifyContent: 'center',
                                             alignItems: 'center',
-                                            width: '80px',
+                                            width: '100px',
                                             height: '30px'
                                         }}>
-                                            {property.Stat === '0' ? 'Not Sold' : 'Sold'}
+                                            {property.Stat === '0' ? 'Not Rented' : 'Rented'}
                                         </div>
                                     </td>
 
